@@ -13,27 +13,14 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/courses", (req, res) => {
-    const course = [
-        "Coursename",
-        "Duration",
-        "Fees",
-    ];
-    const obj = {course:course};
+  const courses = [
+  { id: 1, name: "MERN Stack", duration: "6 Months", fees: 25000 },
+  { id: 2, name: "Python Full Stack", duration: "5 Months", fees: 20000 },
+  { id: 3, name: "Java Development", duration: "4 Months", fees: 18000 }
+];
+    const obj = {courses:courses};
   res.render("courses.ejs",obj);
 });
-
-// app.get("/projects", (req, res) => {
-//   const project = [
-//     "EPCPROMAN",
-//     "SPOOLMAN",
-//     "MYAPP",
-//     "IIFLSECURITIES",
-//     "FASTRACK",
-//   ];
-//   const obj = { project: project };
-//   res.render("projects.ejs", obj);
-// });
-
 
 app.get("/course_details", (req, res) => {
   res.render("course_details.ejs");
